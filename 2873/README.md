@@ -1,4 +1,4 @@
-
+# Maximum Value of an Ordered Triplet I
 
 ## Problem Statement
 You are given a **0-indexed integer array** `nums`.
