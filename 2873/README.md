@@ -1,8 +1,3 @@
-
-<p align="center">
-  <img src="image.png" alt="Code Implementation">
-</p>
-
 # 2873. Maximum Value of an Ordered Triplet I
 
 ## Problem Statement
