@@ -7,36 +7,9 @@ Given a list of questions, where each question is represented as `[points, brain
 This solution employs **recursion with memoization** (using `defaultdict`) to efficiently compute the maximum points possible.
 
 ## Code Explanation
-```python
-from collections import defaultdict
-from typing import List
-
-class Solution:
-    def mostPoints(self, questions: List[List[int]]) -> int:
-        res = [0]
-        cache = defaultdict(int)  # Dictionary to store computed results
-        
-        def func(i):
-            if i >= len(questions):  # Base case: No more questions to answer
-                return 0           
-            
-            if i in cache:  # Return cached result if already computed
-                return cache[i]
-            
-            p1, p2 = questions[i]  # Extract points and brainpower
-            
-            # Option 1: Take the question and skip the next p2 questions
-            take = p1 + func(i + 1 + p2)
-            
-            # Option 2: Skip the current question
-            skip = func(i + 1)
-            
-            # Store the maximum result in cache and return
-            cache[i] = max(take, skip)
-            return cache[i]
-        
-        return func(0)
-```
+<p align="center">
+  <img src="image.png" alt="Code Implementation">
+</p>
 
 ## Explanation of Key Concepts
 - **Recursion**: The function `func(i)` determines the maximum points achievable from index `i` onward.
