@@ -50,8 +50,8 @@ The only ordered triplet of indices (0, 1, 2) has a negative value of `(nums[0] 
 Hence, the answer would be 0.
 
 ## Constraints
-- \(3 \leq nums.length \leq 10^5\)
-- \(1 \leq nums[i] \leq 10^6\)
+- 3 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^6
 
 ---
 
