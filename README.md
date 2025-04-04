@@ -48,7 +48,7 @@ Contributions are **welcome**! If you want to improve a solution or add a new on
 ## 📧 Contact
 
 📬 Feel free to reach out:
-- **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/dhurkesh-b/)
+- **LinkedIn**: [dhurkesh-b](https://www.linkedin.com/in/dhurkesh-b/)
 
 💡 *Happy Coding!* 💻🎯
 
