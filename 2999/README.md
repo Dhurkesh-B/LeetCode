@@ -84,8 +84,7 @@ We solve this using **Digit Dynamic Programming (Digit DP)** to efficiently coun
 
 ## Code
 
-📎 See `image.png` for the full implementation.
-
+![Approach Visual](image.png)
 ---
 
 ## Complexity Analysis
