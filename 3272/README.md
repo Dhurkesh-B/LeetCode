@@ -1,5 +1,3 @@
----
-
 # 3272. Find the Count of Good Integers
 
 ## Problem Statement
@@ -73,7 +71,3 @@ To solve this problem efficiently:
 The implementation is shown in the image below:
 
 ![Python Solution](image.png)
-
----
-
-
