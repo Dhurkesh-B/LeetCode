@@ -1,6 +1,6 @@
 class Solution:
     def countGoodNumbers(self, n: int) -> int:
-        res = 1
+        res = 1 
         mod = 10**9 + 7
         odd = (n+1)//2
         even = n//2
