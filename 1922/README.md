@@ -1,6 +1,6 @@
 # 1922. Count Good Numbers
 
-## Problem Statement
+## Problem Statement 
 
 A digit string is considered **good** if:
 
