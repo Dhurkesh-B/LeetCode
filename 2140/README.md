@@ -9,7 +9,7 @@ This solution employs **recursion with memoization** (using `defaultdict`) to ef
 ## Code Explanation
 <p align="center">
   <img src="image.png" alt="Code Implementation">
-</p>
+</p> 
 
 ## Explanation of Key Concepts
 - **Recursion**: The function `func(i)` determines the maximum points achievable from index `i` onward.
