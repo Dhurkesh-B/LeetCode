@@ -60,6 +60,6 @@ All subarrays except `[1,1,1]` have scores less than 5.
 ## Approach
 The solution uses a **sliding window** technique to efficiently count valid subarrays by maintaining a running sum and adjusting the window when necessary.
 
-📷 **Solution Code:**  
+## Code
 ![image.png](./image.png)
 
