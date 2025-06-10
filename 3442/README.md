@@ -1,71 +1,90 @@
-# 386. Lexicographical Numbers
+# 3442. Maximum Difference Between Even and Odd Frequency I
 
 ## Problem Statement
 
-Given an integer `n`, return all the numbers in the range `[1, n]` sorted in **lexicographical order**.
+You are given a string `s` consisting of lowercase English letters.
 
-You **must write an algorithm that runs in `O(n)` time and uses `O(1)` extra space**.
+Your task is to find the maximum difference `diff = a1 - a2` between the frequency of characters `a1` and `a2` in the string such that:
+
+* `a1` has an **odd** frequency in the string.
+* `a2` has an **even** frequency in the string.
+
+Return this **maximum difference**.
 
 ---
 
-## Example
+## Examples
 
 ### Example 1:
 
 **Input:**
 
 ```
-n = 13
+s = "aaaaabbc"
 ```
 
 **Output:**
 
 ```
-[1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]
+3
 ```
+
+**Explanation:**
+
+* Character 'a' appears 5 times (odd), 'b' appears 2 times (even).
+* The difference is `5 - 2 = 3`.
 
 ### Example 2:
 
 **Input:**
 
 ```
-n = 2
+s = "abcabcab"
 ```
 
 **Output:**
 
 ```
-[1, 2]
+1
 ```
+
+**Explanation:**
+
+* 'a': 3 (odd), 'c': 2 (even) → `3 - 2 = 1`
 
 ---
 
 ## Constraints
 
-* `1 <= n <= 5 * 10^4`
+* `3 <= s.length <= 100`
+* `s` consists only of lowercase English letters.
+* `s` contains **at least one character with an odd frequency** and **one with an even frequency**.
 
 ---
 
-## Optimal Solution Approach
+## Solution Approach
 
-To meet the `O(n)` time and `O(1)` space requirements, we perform a **depth-first traversal** from 1 to n, exploring each number's lexicographical children by multiplying by 10 or incrementing. This avoids creating the entire list upfront and sorting.
+The algorithm:
 
----
-
-## Visual Reference
-
-![Implementation](image.png)
-
-The image above outlines a simple approach but **note that this method does not meet the O(n)/O(1)** constraint. A more optimal DFS approach would be required for large inputs.
+1. Count frequency of each character.
+2. Track the maximum frequency among **odd counts**.
+3. Track the minimum frequency among **even counts**.
+4. Return the difference between them.
 
 ---
 
-## Key Takeaways
+## Complexity Analysis
 
-* Lexicographical order is not the same as numerical order.
-* A DFS traversal can efficiently generate such an ordering without full sorting.
-* Be mindful of space and time constraints when solving large input problems.
+* **Time Complexity:** `O(n)`, where `n` is the length of the string.
+* **Space Complexity:** `O(1)`, as at most 26 characters are stored.
 
 ---
 
-⭐ *If you found this helpful or have improvements, feel free to contribute!*
+## Key Insights
+
+* Handles multiple characters with odd/even counts.
+* Guarantees output as per constraints.
+
+---
+
+⭐ *If this helped, consider sharing or contributing improvements!*
