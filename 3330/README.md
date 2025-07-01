@@ -97,8 +97,6 @@ The possible original strings are:
 
 ## Code (Java)
 
-![Implementation](image.png)
-
 ```java
 class Solution {
     public int possibleStringCount(String word) {
