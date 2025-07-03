@@ -76,6 +76,7 @@ k = 10
 
 ## Code Representation
 
+![Implementation](image.png)
 ---
 
 ## Summary
