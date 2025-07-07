@@ -73,6 +73,7 @@ This greedy algorithm ensures that we always prioritize events that end earlier,
 ---
 
 ## Code Representation
+![Code](image.png) 
 
 ---
 
