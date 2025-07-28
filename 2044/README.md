@@ -1,45 +1,60 @@
 
-# Leetcode 2210: Count Hills and Valleys in an Array
+# 🏠 Leetcode 2044: Count Number of Maximum Bitwise-OR Subsets
 
 ## 📘 Problem Statement
 
-You are given a 0-indexed integer array `nums`. An index `i` is part of a **hill** in `nums` if the closest non-equal neighbors of `i` are **smaller** than `nums[i]`.  
-Similarly, an index `i` is part of a **valley** if the closest non-equal neighbors of `i` are **larger** than `nums[i]`.
+Given an integer array `nums`, find the **maximum possible bitwise OR** of any non-empty subset of `nums` and **return the number of different non-empty subsets** with that maximum bitwise OR.
 
-Adjacent indices `i` and `j` are part of the **same hill or valley** if `nums[i] == nums[j]`.
-
-**Return** the number of hills and valleys in `nums`.
+Two subsets are considered different if the indices of the elements chosen are different.
 
 ---
 
 ## 🧪 Examples
 
 ### ✅ Example 1:
-**Input:** `nums = [2,4,1,1,6,5]`  
-**Output:** `3`
+
+**Input:** `nums = [3,1]`
+**Output:** `2`
 
 **Explanation:**
-- Index 1 (4) is a hill (neighbors: 2 and 1).
-- Index 2 and 3 (1,1) are valleys (neighbors: 4 and 6).
-- Index 4 (6) is a hill (neighbors: 1 and 5).
+
+* Maximum OR = `3`
+* Subsets: `[3]`, `[3,1]`
+
+---
 
 ### ✅ Example 2:
-**Input:** `nums = [6,6,5,5,4,1]`  
-**Output:** `0`
+
+**Input:** `nums = [2,2,2]`
+**Output:** `7`
 
 **Explanation:**
-- No valid hill or valley found based on the rules.
+
+* Maximum OR = `2`
+* All 7 non-empty subsets have OR = 2
+
+---
+
+### ✅ Example 3:
+
+**Input:** `nums = [3,2,1,5]`
+**Output:** `6`
+
+**Explanation:**
+
+* Maximum OR = `7`
+* Subsets with OR = 7:
+  `[3,5]`, `[3,1,5]`, `[3,2,5]`, `[3,2,1,5]`, `[2,5]`, `[2,1,5]`
 
 ---
 
 ## 🧠 Approach
 
-1. Traverse from index `1` to `n-2`.
-2. Skip duplicates (`nums[i] == nums[i+1]`) to avoid counting the same hill/valley multiple times.
-3. Compare current value with previous and next distinct elements:
-   - If `nums[i]` is greater than both, it's a **hill**.
-   - If `nums[i]` is smaller than both, it's a **valley**.
-4. Count such hills and valleys.
+1. **Compute the target OR** by taking bitwise OR of all elements.
+2. Use **DFS/backtracking** to explore all subsets.
+3. Maintain a counter of subsets whose OR equals the target.
+
+Since `nums.length ≤ 16`, it's efficient enough to try all possible subsets (at most `2^16 = 65536`).
 
 ---
 
@@ -51,24 +66,27 @@ Adjacent indices `i` and `j` are part of the **same hill or valley** if `nums[i]
 
 ## ⏱️ Time & Space Complexity
 
-- **Time Complexity:** `O(n)` — One pass through the array.
-- **Space Complexity:** `O(1)` — No extra space used except variables.
+| Type     | Complexity               |
+| -------- | ------------------------ |
+| 🕒 Time  | `O(2^n)`                 |
+| 🧠 Space | `O(n)` (recursion stack) |
+
+Where `n = nums.length`
 
 ---
 
 ## 📚 Constraints
 
-- `3 <= nums.length <= 100`
-- `1 <= nums[i] <= 100`
+* `1 <= nums.length <= 16`
+* `1 <= nums[i] <= 10^5`
 
 ---
 
 ## 🔗 Related Topics
 
-- Array
-- Two Pointers
-- Simulation
+* Bit Manipulation
+* Recursion
+* Backtracking
+* Subsets / Combinatorics
 
 ---
-
-Feel free to replace `image.png` with a code snippet if you're viewing this outside a markdown-supported platform.
